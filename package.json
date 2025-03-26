@@ -1,152 +1,43 @@
 {
-  "name": "@baronha/react-native-photo-editor",
-  "version": "1.1.5",
-  "description": "🌄 Image editor using native modules for iOS and Android",
-  "main": "lib/commonjs/index",
-  "module": "lib/module/index",
-  "types": "lib/typescript/index.d.ts",
-  "react-native": "src/index",
-  "source": "src/index",
-  "files": [
-    "src",
-    "lib",
-    "android",
-    "ios",
-    "cpp",
-    "react-native-photo-editor.podspec",
-    "!lib/typescript/example",
-    "!android/build",
-    "!ios/build",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__"
-  ],
-  "scripts": {
-    "test": "jest",
-    "typescript": "tsc --noEmit",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "prepare": "bob build",
-    "release": "release-it",
-    "example": "yarn --cwd example",
-    "pods": "cd example && pod-install --quiet",
-    "bootstrap": "yarn example && yarn && yarn pods"
-  },
-  "keywords": [
-    "react-native",
-    "ios",
-    "android"
-  ],
-  "repository": "https://github.com/baronha/react-native-photo-editor",
-  "author": "Baron Ha. <baronn.ha@gmail.com> (https://github.com/baronha)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/baronha/react-native-photo-editor/issues"
-  },
-  "homepage": "https://github.com/baronha/react-native-photo-editor#readme",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
-  "devDependencies": {
-    "@commitlint/config-conventional": "^11.0.0",
-    "@react-native-community/eslint-config": "^2.0.0",
-    "@release-it/conventional-changelog": "^2.0.0",
-    "@types/jest": "^26.0.0",
-    "@types/react": "^16.9.19",
-    "@types/react-native": "0.62.13",
-    "commitlint": "^11.0.0",
-    "eslint": "^7.2.0",
-    "eslint-config-prettier": "^7.0.0",
-    "eslint-plugin-prettier": "^3.1.3",
-    "jest": "^26.0.1",
-    "pod-install": "^0.1.0",
-    "prettier": "^2.0.5",
-    "react": "16.13.1",
-    "react-native": "0.63.4",
-    "react-native-builder-bob": "^0.18.1",
-    "release-it": "^14.2.2",
-    "typescript": "^4.1.3"
-  },
-  "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
-  },
-  "jest": {
-    "preset": "react-native",
-    "modulePathIgnorePatterns": [
-      "<rootDir>/example/node_modules",
-      "<rootDir>/lib/"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn lint && yarn typescript"
-    }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "release-it": {
-    "git": {
-      "commitMessage": "chore: release ${version}",
-      "tagName": "v${version}"
-    },
-    "npm": {
-      "publish": true
-    },
-    "github": {
-      "release": true
-    },
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": "angular"
-      }
-    }
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "@react-native-community",
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "quoteProps": "consistent",
-          "singleQuote": true,
-          "tabWidth": 2,
-          "trailingComma": "es5",
-          "useTabs": false
-        }
-      ]
-    }
-  },
-  "eslintIgnore": [
-    "node_modules/",
-    "lib/"
-  ],
-  "prettier": {
-    "quoteProps": "consistent",
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "es5",
-    "useTabs": false
-  },
-  "react-native-builder-bob": {
-    "source": "src",
-    "output": "lib",
-    "targets": [
-      "commonjs",
-      "module",
-      [
-        "typescript",
-        {
-          "project": "tsconfig.build.json"
-        }
-      ]
-    ]
-  }
+	"name": "@deltasoft365/expo-photo-editor",
+	"version": "0.1.0",
+	"description": "Expo photo editor module",
+	"main": "build/index.js",
+	"types": "build/index.d.ts",
+	"scripts": {
+		"build": "expo-module build",
+		"clean": "expo-module clean",
+		"lint": "expo-module lint",
+		"test": "expo-module test",
+		"prepare": "expo-module prepare",
+		"prepublishOnly": "expo-module prepublishOnly",
+		"expo-module": "expo-module",
+		"open:ios": "xed example/ios",
+		"open:android": "open -a \"Android Studio\" example/android"
+	},
+	"keywords": [
+		"react-native",
+		"expo",
+		"expo-photo-editor",
+		"ExpoPhotoEditor"
+	],
+	"repository": "https://github.com/Delta-Software-365/delta_expo-photo-editor",
+	"bugs": {
+		"url": "https://github.com/Delta-Software-365/delta_expo-photo-editor/issues"
+	},
+	"author": "Lane Lu <llu@deltasoft365.com> (https://github.com/llucn)",
+	"license": "MIT",
+	"homepage": "https://github.com/Delta-Software-365/delta_expo-photo-editor#readme",
+	"dependencies": {},
+	"devDependencies": {
+		"@types/react": "~18.3.12",
+		"expo-module-scripts": "^4.0.3",
+		"expo": "~52.0.0",
+		"react-native": "0.76.0"
+	},
+	"peerDependencies": {
+		"expo": "*",
+		"react": "*",
+		"react-native": "*"
+	}
 }
