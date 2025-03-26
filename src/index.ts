@@ -17,6 +17,6 @@ type PhotoEditorType = {
   open(option: Options): Promise<String>;
 };
 
-const PhotoEditor = requireNativeModule('ExpoPhotoEdit');
+const PhotoEditor = requireNativeModule('ExpoPhotoEditor');
 
 export default PhotoEditor as PhotoEditorType;

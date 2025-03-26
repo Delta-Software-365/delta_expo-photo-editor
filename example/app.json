@@ -37,7 +37,7 @@
 				}
 			],
 			[
-				"@deltasoft365/expo-photo-editor",
+				"../app.plugin.js",
 				{
 					"podfile": {
 						"anchor": "prepare_react_native_project!",
