@@ -11,6 +11,7 @@ import Photos
 import SDWebImage
 import AVFoundation
 //import ZLImageEditor
+import ExpoModulesCore
 
 public enum ImageLoad: Error {
     case failedToLoadImage(String)
